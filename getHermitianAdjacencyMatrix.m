@@ -1,6 +1,6 @@
 %% エルミート隣接行列を算出する関数
 
-function H = getHermitianAdjencyMatrix(A)
+function H = getHermitianAdjacencyMatrix(A)
 
   % A: 隣接行列
   % H: エルミート隣接行列

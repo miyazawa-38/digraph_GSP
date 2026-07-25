@@ -1,4 +1,4 @@
-%% main関数
+%% 手法を比較するためのmain関数
 
 % ヨーロッパのemailのネットワーク
 addpath('datasets/email');
@@ -63,7 +63,8 @@ y_mg = IGFT(U_mg, y_hat_mg);
 %% ==============================================
 
 
-% 信号を描画
+%% ===== 信号を描画 =====
+
 plotThreeVectors(x_hat, x_hat_m, x_hat_mg, 'Kamata', 'Muramatsu', 'Magnetic', ...
                  'Signals on GF domain before processing', ...
                  'index of eigenvalue', 'spectral');
@@ -72,13 +73,5 @@ plotThreeVectors(y_hat, y_hat_m, y_hat_mg, 'Kamata', 'Muramatsu', 'Magnetic', ..
                  'Signals on GF domain after processing', ...
                  'index of eigenvalue', 'spectral');
 
-% TV
-% TV_x = calculateTotalVariation(L, x);
-% TV_y = calculateTotalVariation(L, y);
-% disp("元の信号の総変動");
-% disp(TV_x);
-% disp("処理後の信号の総変動");
-% disp(TV_y);
-
-
+%% ==============================================
 
