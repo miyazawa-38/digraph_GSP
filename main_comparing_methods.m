@@ -71,8 +71,6 @@ plotThreeVectors(x_hat, x_hat_m, x_hat_mg, 'Kamata', 'Muramatsu', 'Magnetic', ..
 plotThreeVectors(y_hat, y_hat_m, y_hat_mg, 'Kamata', 'Muramatsu', 'Magnetic', ...
                  'Signals on GF domain after processing', ...
                  'index of eigenvalue', 'spectral');
-% plotGraphSignal(x_hat, y_hat);
-% plotGraphSignal2(x_hat, y_hat);
 
 % TV
 % TV_x = calculateTotalVariation(L, x);
