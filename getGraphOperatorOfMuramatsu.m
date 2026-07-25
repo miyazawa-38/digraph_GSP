@@ -13,7 +13,7 @@ function [H, D_m, L_m, L_tilde_m, U_m, lambda_m] = getGraphOperatorOfMuramatsu(A
   H = getHermitianAdjencyMatrix(A);
 
   % 次数行列
-  D_m = getDegreeMatrixAsL2Norm(H);
+  D_m = getDegreeMatrixOfMuramatsu(H);
 
   % グラフラプラシアン
   L_m = D_m - H;

@@ -13,7 +13,7 @@ function [H, D, L, L_tilde, U, lambda] = getGraphOperator(A)
   H = getHermitianAdjencyMatrix(A);
 
   % エルミート隣接行列に対しての次数行列
-  D = getDegreeMatrixAsL1Norm(H);
+  D = getDegreeMatrix(H);
   
   % エルミートグラフラプラシアン
   L = D - H;
