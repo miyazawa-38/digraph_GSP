@@ -1,7 +1,7 @@
 %% main関数
 
 % ヨーロッパのemailのネットワーク
-addpath('datasets/email');  
+addpath('datasets/email');
 A = getAdjacencyMatrix('email-Eu-core-temporal-Dept1.txt');
 x = generateGraphSignal(A);
 
@@ -14,6 +14,9 @@ x = generateGraphSignal(A);
 
 % 村松先生のグラフ作用素
 [H_m, D_m, L_m, L_tilde_m, U_m, lambda_m] = getGraphOperatorOfMuramatsu(A);
+
+% Magneticラプラシアンに関するグラフ作用素
+[H_mg, D_mg, L_mg, L_tilde_mg, U_mg, lambda_mg] = getGraphOperatorOfMagnetic(A);
 
 % GFT
 x_hat = GFT(U, x);

@@ -4,13 +4,14 @@ function [H, D, L, L_tilde, U, lambda] = getGraphOperator(A)
 
   % A: 隣接行列
   % H: エルミート隣接行列
+  % D: 次数行列
   % L: エルミートグラフラプラシアン
   % L_tilde: 正規化エルミートグラフラプラシアン
   % U: 固有ベクトル行列
   % lambda: 固有値のベクトル
 
   % エルミート隣接行列
-  H = getHermitianAdjencyMatrix(A);
+  H = getHermitianAdjacencyMatrix(A);
 
   % エルミート隣接行列に対しての次数行列
   D = getDegreeMatrix(H);

@@ -11,4 +11,6 @@
 
 % a = 3 + 4i;
 % abs(a)
-error('plotSignal: x and y must have the same number of elements');
+% error('plotSignal: x and y must have the same number of elements');
+
+pi

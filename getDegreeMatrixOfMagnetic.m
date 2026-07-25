@@ -3,15 +3,11 @@
 function D_mg = getDegreeMatrixOfMagnetic(A)
 
   % A: 隣接行列
+  % D_mg: 次数行列
 
+  % 辺の重みを対称化
   W = (A + A')/2;
 
-  [row_size, column_size] = size(A);
-  D_mg = zeros(row_size);
-
-  for i = 1:row_size
-    for j = 1:column_size
-      D_mg(i,i) += W(i,j);
-    end
-  end
+  % 次数行列
+  D_mg = diag(sum(W, 2));
 end

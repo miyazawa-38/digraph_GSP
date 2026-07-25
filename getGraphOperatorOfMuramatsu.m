@@ -4,13 +4,14 @@ function [H, D_m, L_m, L_tilde_m, U_m, lambda_m] = getGraphOperatorOfMuramatsu(A
 
   % A: 隣接行列
   % H: エルミート隣接行列
+  % D_m: 次数行列
   % L_m: 村松先生のエルミートグラフラプラシアン
   % L_tilde_m: 村松先生の正規化エルミートグラフラプラシアン
   % U_m: 村松先生の固有ベクトル行列
   % lambda_m: 村松先生の固有値のベクトル
 
   % エルミート隣接行列
-  H = getHermitianAdjencyMatrix(A);
+  H = getHermitianAdjacencyMatrix(A);
 
   % 次数行列
   D_m = getDegreeMatrixOfMuramatsu(H);
