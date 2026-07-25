@@ -1,5 +1,5 @@
 %% 変数や画像を消去するスクリプト
 
-clc;
-clearvars;
+% clc;
+% clearvars;
 close all;

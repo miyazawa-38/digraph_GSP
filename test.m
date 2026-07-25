@@ -6,9 +6,10 @@
 % 
 % x_send = sum(A,1)
 
-A = [0,-3,1];
+a = [0;-3;1];
+a = abs(a(:))
 
-% g = exp(1 * A)
+% g = exp(1 * a)
 
 % a = 3 + 4i;
 % abs(a)
