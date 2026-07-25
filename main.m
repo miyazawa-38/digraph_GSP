@@ -12,7 +12,7 @@ x = generateGraphSignal(A);
 % グラフ作用素
 [H, D, L, L_tilde, U, lambda] = getGraphOperator(A);
 
-% % 村松先生のグラフ作用素
+% 村松先生のグラフ作用素
 [H_m, D_m, L_m, L_tilde_m, U_m, lambda_m] = getGraphOperatorOfMuramatsu(A);
 
 % GFT
