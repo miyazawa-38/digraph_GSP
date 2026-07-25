@@ -13,7 +13,7 @@ x = generateGraphSignal(A);
 [H, D, L, L_tilde, U, lambda] = getGraphOperator(A);
 
 % % 村松先生のグラフ作用素
-% [H_k, D_k, L_k, L_tilde_k, U_k, lambda_k] = getGraphOperatorOfMuramatsu(A);
+[H_m, D_m, L_m, L_tilde_m, U_m, lambda_m] = getGraphOperatorOfMuramatsu(A);
 
 % GFT
 x_hat = GFT(U, x);
@@ -27,12 +27,16 @@ y_hat = filterHeatKernel(x_hat, lambda, 5);
 y = IGFT(U, y_hat);
 % disp(y(1:10));
 
-% 信号を描画
-plotGraphSignal(x_hat, y_hat);
-plotGraphSignal2(x_hat, y_hat);
+% % 信号を描画
+% plotGraphSignal(x_hat, y_hat);
+% plotGraphSignal2(x_hat, y_hat);
 
+% TV
+TV_x = calculateTotalVariation(L, x);
+TV_y = calculateTotalVariation(L, y);
 
-
+disp(TV_x);
+disp(TV_y);
 
 
 
