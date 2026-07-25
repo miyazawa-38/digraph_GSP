@@ -6,11 +6,11 @@
 % 
 % x_send = sum(A,1)
 
-% A = [0,3,1];
+A = [0,-3,1];
+
 % g = exp(1 * A)
 
 % a = 3 + 4i;
 % abs(a)
 % error('plotSignal: x and y must have the same number of elements');
 
-pi
