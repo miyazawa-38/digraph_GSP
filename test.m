@@ -6,8 +6,12 @@
 % 
 % x_send = sum(A,1)
 
-a = [0;-3;1];
-a = abs(a(:))
+% a = [0;-3;1];
+% a = abs(a(:))
+
+a = 0:0.1:1;
+length(a)
+size(a)
 
 % g = exp(1 * a)
 
