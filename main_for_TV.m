@@ -102,12 +102,12 @@ end
 
 %% ===== TVの値を描画 =====
 
-plotOneVector(TV_values, 'TVの値', 'TVの値の変化', 'tau', 'value of TV')
+% plotOneVector(TV_values, 'TVの値', 'TVの値の変化', 'tau', 'value of TV')
 
-plotThreeVectors(TV_values, TV_values_m, TV_values_mg, 'Kamata', 'Muramatsu', 'Magnetic', ...
+plotThreeVectors(tau_values, TV_values, TV_values_m, TV_values_mg, ...
+                 'Kamata', 'Muramatsu', 'Magnetic', ...
                  'TVの値の変化', ...
                  'tau', 'value of TV');
 
 %% ==============================================
-
 

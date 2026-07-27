@@ -19,7 +19,7 @@ x = generateGraphSignal(A);
 x_hat = GFT(U, x);
 
 % フィルタリング
-y_hat = filterHeatKernel(x_hat, lambda, 5);
+y_hat = filterHeatKernel(x_hat, lambda, 3);
 
 % IGFT
 y = IGFT(U, y_hat);
@@ -37,7 +37,7 @@ y = IGFT(U, y_hat);
 x_hat_m = GFT(U_m, x);
 
 % フィルタリング
-y_hat_m = filterHeatKernel(x_hat_m, lambda_m, 5);
+y_hat_m = filterHeatKernel(x_hat_m, lambda_m, 3);
 
 % IGFT
 y_m = IGFT(U_m, y_hat_m);
@@ -55,7 +55,7 @@ y_m = IGFT(U_m, y_hat_m);
 x_hat_mg = GFT(U_mg, x);
 
 % フィルタリング
-y_hat_mg = filterHeatKernel(x_hat_mg, lambda_mg, 5);
+y_hat_mg = filterHeatKernel(x_hat_mg, lambda_mg, 3);
 
 % IGFT
 y_mg = IGFT(U_mg, y_hat_mg);
@@ -65,13 +65,14 @@ y_mg = IGFT(U_mg, y_hat_mg);
 
 %% ===== 信号を描画 =====
 
-plotThreeVectors(x_hat, x_hat_m, x_hat_mg, 'Kamata', 'Muramatsu', 'Magnetic', ...
+plotThreeVectors(1:numel(x_hat), x_hat, x_hat_m, x_hat_mg, ...
+                 'Kamata', 'Muramatsu', 'Magnetic', ...
                  'Signals on GF domain before processing', ...
                  'index of eigenvalue', 'spectral');
 
-plotThreeVectors(y_hat, y_hat_m, y_hat_mg, 'Kamata', 'Muramatsu', 'Magnetic', ...
+plotThreeVectors(1:numel(y_hat), y_hat, y_hat_m, y_hat_mg, ...
+                 'Kamata', 'Muramatsu', 'Magnetic', ...
                  'Signals on GF domain after processing', ...
                  'index of eigenvalue', 'spectral');
 
 %% ==============================================
-
