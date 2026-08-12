@@ -1,0 +1,2 @@
+addpath("main");
+addpath("src");
