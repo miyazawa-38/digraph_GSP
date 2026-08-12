@@ -1,5 +1,8 @@
 %% 手法を比較するためのmain関数
 
+%% x_hatを図に起こした結果、低周波と高周波のスペクトルが大きくなった
+%% これがなぜなのかを調べるコードはmain_spectral_distribution.mに書く
+
 % ヨーロッパのemailのネットワーク
 addpath('datasets/email');
 A = getAdjacencyMatrix('email-Eu-core-temporal-Dept1.txt');
