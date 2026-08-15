@@ -62,7 +62,7 @@ for i = 1:length(tau_values)
   y_m = IGFT(U_m, y_hat_m);
 
   % TVを保存
-  TV_values_m(i) = calculateTotalVariation(L, y_m);
+  TV_values_m(i) = calculateTotalVariation(L_m, y_m);
 end
 
 % --------------------------------------------
@@ -92,7 +92,7 @@ for i = 1:length(tau_values)
   y_mg = IGFT(U_mg, y_hat_mg);
 
   % TVを保存
-  TV_values_mg(i) = calculateTotalVariation(L, y_mg);
+  TV_values_mg(i) = calculateTotalVariation(L_mg, y_mg);
 end
 
 % --------------------------------------------
